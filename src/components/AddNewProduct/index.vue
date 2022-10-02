@@ -1,0 +1,72 @@
+<!-- eslint-disable vue/multi-word-component-names -->
+<template>
+  <div>
+    <div class="">
+      <div class="" v-if="isAddRequest">
+        <button class="" @click="closePopup">Закрити</button>
+      </div>
+      <div class="" v-else>
+        <div class="">
+          <p class="">Додати новий товар</p>
+        </div>
+        <div class="popup_content">
+          <form>
+            <div class="Addnewproductwrapper">
+              <label class="popup_wrapper-label">Фото</label>
+              <input
+                class="popup_wrapper-input"
+                type="text"
+                placeholder="Photo"
+              />
+            </div>
+            <div class="Addnewproductwrapper">
+              <label class="popup_wrapper-label">Назва</label>
+              <input
+                class="popup_wrapper-input"
+                type="text"
+                placeholder="Name"
+              />
+            </div>
+            <div class="Addnewproductwrapper">
+              <label class="popup_wrapper-label">Торгова Марка</label>
+              <input
+                class="popup_wrapper-input"
+                type="text"
+                placeholder="TradeMark"
+              />
+            </div>
+            <div class="Addnewproductwrapper">
+              <label class="popup_wrapper-label">Ціна</label>
+              <input
+                class="popup_wrapper-input"
+                type="number"
+                placeholder="Price"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="popup_footer">
+          <button class="request_call-btn" @click="isAddRequest">Додати</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  Name: "AddNewProduct",
+  data() {
+    return {
+      isAddRequest: false,
+    };
+  },
+  methods: {
+    addRequest() {
+      this.isAddRequest = true;
+    },
+  },
+};
+</script>
+
+<style lang="css" scoped></style>
